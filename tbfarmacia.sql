@@ -13,3 +13,6 @@ use dbfarmacia;
 
 -- visualizando tabelas
 show tables;
+
+--visualizar o campo da tabela
+desc 
