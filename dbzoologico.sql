@@ -67,4 +67,10 @@ select TIPO as 'Tipo de Animal',NOME as 'Nome do Animal',IDADE as 'Tempo de Vida
 
 select 'Animal Domestico' as 'Procedencia',TIPO,NOME,IDADE as 'Tempo de Vida' from tbanimais;
 
+-- 9. Escreva um comando que apresente os dados da tabela ANIMAIS da seguinte forma:
+select TIPO,NOME,IDADE,VALOR as 'Valor Original',VALOR * 1.10 'Valor de Venda' from tbanimais; 
+
+-- 10.. Escreva um comando que apresente os dados da tabela ANIMAIS como vemos a seguir,apresentando uma vez os dados repetidos.
+
+select distinct TIPO, VALOR as 'Valor Original',VALOR * 1.10 'Valor de Venda' from tbanimais;	
 
