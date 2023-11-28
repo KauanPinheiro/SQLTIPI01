@@ -52,5 +52,6 @@ select * from PRODUTOS where NOME not like '%Y%';
 
 -- 6. Exibir todos os produtos que se iniciem com nome 'MO' e tenham como tipo as letras 'MA'
 
-select * from PRODUTOS where NOME like 'MO%';
+select * from PRODUTOS where NOME like 'MO%'and tipo like '%MA%';
+
 	
