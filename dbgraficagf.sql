@@ -14,6 +14,9 @@ salario decimal(9,2) default 0 check(salario >= 0),
 sexo char(1) default 'F' check(sexo in('F','M')),
 primary key(codfunc)
 );
+insert into tbfuncionarios(nome,cpf,salario,sexo)
+	values();
+
 create table tbfornecedores(
 codforn int not null auto_increment,
 nome varchar(100) not null,
@@ -59,7 +62,6 @@ foreign key(codprod)references tbprodutos(codprod),
 foreign key(codcli)references tbclientes(codcli)
 );
 
-
 show tables;
 
 desc tbfuncionarios;
@@ -68,3 +70,63 @@ desc tbclientes;
 desc tbusuarios;
 desc tbprodutos;
 desc tbvendas;
+
+-- Inserindo registro nas tabelas
+
+insert into tbFuncionarios(nome,cpf,salario,sexo)
+    values('Mauricio Antunes','158.952.358-88',1500.50,'M');
+insert into tbFuncionarios(nome,cpf,salario,sexo)
+    values('Vitoria Cristina dos Santos','147.852.748-21',10500.00,'F');
+insert into tbFuncionarios(nome,cpf,salario,sexo)
+    values('Thiago Gonçalves Santos','127.852.748-21',8500.00,'M');
+insert into tbFuncionarios(nome,cpf,salario,sexo)
+    values('Lucas de Meireles Gonzaga','137.852.748-21',5500.00,'M');
+insert into tbFuncionarios(nome,cpf,salario,sexo)
+    values('Isabelli Chrispiniano','852.587.848-21',10500.00,'F');
+
+ 
+
+
+insert into tbFornecedores(nome,cnpj)
+    values('Advance Papers','147.258.0001/2518');
+insert into tbFornecedores(nome,cnpj)
+    values('Papeis SA','187.258.0001/2518');
+insert into tbFornecedores(nome,cnpj)
+    values('Colas e Colagens','257.258.0001/2518');
+
+ 
+
+insert into tbClientes(nome,cpf)
+    values('Gustavo da Penha','325.952.687-99');
+
+ 
+
+insert into tbUsuarios(nome,senha,codFunc)
+    values('mauricio.antunes','123456',1);
+insert into tbUsuarios(nome,senha,codFunc)
+    values('vitoria.csantos','1234567',2);
+insert into tbUsuarios(nome,senha,codFunc)
+    values('isabelli.chrispiniano','152234567',5);
+
+ 
+
+insert into tbProdutos(descricao,valor,qtde,dataEnt,horaEnt,codForn)
+    values('Papel A4',10.00,50,'2023/11/25','09:45:45',2);
+
+ 
+
+insert into tbVendas(dataVenda,horaVenda,qtde,codUsu,codProd,codCli)
+    values('2023/11/30','09:50:00',25,2,1,1);
+
+-- alterando registro nas tabels
+
+-- excluindo registros nas tabelas 
+
+-- fazendo buscas nas tabelas
+
+select * from tbFuncionarios;
+select * from tbFornecedores;
+select * from tbClientes;
+select * from tbUsuarios;
+select * from tbProdutos;
+select * from tbVendas;
