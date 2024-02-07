@@ -34,7 +34,7 @@ create table tbviagem(
 idViagem int not null auto_increment,
 dataViagem date not null,
 tempo time not null,
-valor decimal(9,2),
+valor decimal(9,2) default 0,
 origem varchar(100),
 destino varchar(100),
 idCliente int not null,
